@@ -1,0 +1,78 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BS	fs.h	12;"	d
+FS_SIZE	fs.h	11;"	d
+child	fs.h	/^  dir_record child[BS\/sizeof(dir_record)]; \/\/first index = current, second index = parent$/;"	m	struct:dir_struct
+createDisk	createDisk.c	/^int createDisk(char *file_name)$/;"	f
+data	fs.h	/^  char data[BS]; \/\/block size buffer string$/;"	m	struct:data_block_struct
+data_block	fs.h	/^}data_block;$/;"	t	typeref:struct:data_block_struct
+data_block_bmap_offset	fs.h	/^  unsigned int data_block_bmap_offset; \/\/ start position of data_block  bmap$/;"	m	struct:superblock
+data_block_offset	fs.h	/^  unsigned int data_block_offset; \/\/ start position of data_block$/;"	m	struct:superblock
+data_block_struct	fs.h	/^typedef struct data_block_struct{$/;"	s
+db_bmap	fs.h	/^}db_bmap;$/;"	t	typeref:struct:db_bmap_struct
+db_bmap_index	fs.h	/^  char db_bmap_index[FS_SIZE\/BS];$/;"	m	struct:db_bmap_struct
+db_bmap_object	fs.h	/^db_bmap *db_bmap_object; $/;"	v
+db_bmap_struct	fs.h	/^typedef struct db_bmap_struct {$/;"	s
+db_index	fs.h	/^  unsigned int db_index[BS\/(sizeof(int *))]; \/\/ 4096\/4 = 1024 adress$/;"	m	struct:si_block_struct
+dir	fs.h	/^}dir;$/;"	t	typeref:struct:dir_struct
+dir_record	fs.h	/^}dir_record;$/;"	t	typeref:struct:dir_record_struct
+dir_record_struct	fs.h	/^typedef struct dir_record_struct{$/;"	s
+dir_struct	fs.h	/^typedef struct dir_struct {$/;"	s
+direct_block_offset	fs.h	/^  unsigned int direct_block_offset; \/\/address of direct block, will typecasted on f or d;$/;"	m	struct:inode_struct
+fd	fs.h	/^int fd;$/;"	v
+file_name	fs.h	/^  char file_name[28];$/;"	m	struct:dir_record_struct
+file_type	fs.h	/^  char file_type; \/\/ file_type: d - directory | f - file$/;"	m	struct:inode_struct
+filewrite	write.c	/^int filewrite(char *file_name)$/;"	f
+get_db_bmap	get.c	/^db_bmap *get_db_bmap()$/;"	f
+get_inode	get.c	/^int get_inode(char *file, int i_index, int size)$/;"	f
+get_inode_bmap	get.c	/^inode_bmap *get_inode_bmap()$/;"	f
+get_inode_table	get.c	/^inode_table *get_inode_table()$/;"	f
+get_next_offset_to_write	write.c	/^unsigned int get_next_offset_to_write(inode *file_inode)$/;"	f
+get_super_block	get.c	/^sb *get_super_block()$/;"	f
+init_db_bmap	init.c	/^int init_db_bmap()$/;"	f
+init_inode_bmap	init.c	/^int init_inode_bmap()$/;"	f
+init_inode_table	init.c	/^int init_inode_table()$/;"	f
+init_root_dir	init.c	/^int init_root_dir()$/;"	f
+init_superblock	init.c	/^int init_superblock()$/;"	f
+initiate_file_system	init.c	/^int initiate_file_system()$/;"	f
+inode	fs.h	/^}inode;$/;"	t	typeref:struct:inode_struct
+inode_bmap	fs.h	/^}inode_bmap;$/;"	t	typeref:struct:inode_bmap_struct
+inode_bmap_index	fs.h	/^  char inode_bmap_index[FS_SIZE\/BS];$/;"	m	struct:inode_bmap_struct
+inode_bmap_object	fs.h	/^inode_bmap *inode_bmap_object; $/;"	v
+inode_bmap_offset	fs.h	/^  unsigned int inode_bmap_offset; \/\/ start position of inode bmap$/;"	m	struct:superblock
+inode_bmap_struct	fs.h	/^typedef struct inode_bmap_struct {$/;"	s
+inode_index	fs.h	/^  inode inode_index[FS_SIZE\/BS]; \/\/FS_SIZE\/Block_size;$/;"	m	struct:inode_table_struct
+inode_index	fs.h	/^  unsigned int inode_index;$/;"	m	struct:dir_record_struct
+inode_struct	fs.h	/^typedef struct inode_struct{$/;"	s
+inode_table	fs.h	/^}inode_table;$/;"	t	typeref:struct:inode_table_struct
+inode_table_object	fs.h	/^inode_table *inode_table_object; $/;"	v
+inode_table_offset	fs.h	/^  unsigned int inode_table_offset; \/\/ start position of inode_table$/;"	m	struct:superblock
+inode_table_struct	fs.h	/^typedef struct inode_table_struct{$/;"	s
+main	main.c	/^int main(int argc, char *argv[])$/;"	f
+make_entry	entry.c	/^int make_entry(char *file_path,char *inp_file_name)$/;"	f
+my_read	get.c	/^int my_read(void *buff, int n,int offset)$/;"	f
+my_write	init.c	/^int my_write(void *buff, int n, int offset)$/;"	f
+next_free_data_block_offset	fs.h	/^  unsigned int next_free_data_block_offset;$/;"	m	struct:superblock
+next_free_inode_index	fs.h	/^  unsigned int next_free_inode_index; \/\/index in inode table list$/;"	m	struct:superblock
+no_free_blocks	fs.h	/^  unsigned int no_free_blocks;$/;"	m	struct:superblock
+no_free_inodes	fs.h	/^  unsigned int no_free_inodes;$/;"	m	struct:superblock
+print_data_block	read.c	/^int print_data_block(int count, unsigned int offset,int t){$/;"	f
+read_file	read.c	/^int read_file(char *filePath)$/;"	f
+read_file_from_indirect_block	read.c	/^int read_file_from_indirect_block(int file_size, inode * file_inode)$/;"	f
+sb	fs.h	/^}sb;$/;"	t	typeref:struct:superblock
+sb_object	fs.h	/^sb *sb_object; $/;"	v
+set_next_free_block	write.c	/^int set_next_free_block(){$/;"	f
+set_next_free_inode_index	write.c	/^int set_next_free_inode_index(){$/;"	f
+si_block	fs.h	/^}si_block;$/;"	t	typeref:struct:si_block_struct
+si_block_struct	fs.h	/^typedef struct si_block_struct{$/;"	s
+single_indirect_block_offset	fs.h	/^  unsigned int single_indirect_block_offset; \/\/ address of single indirect block$/;"	m	struct:inode_struct
+size	fs.h	/^  unsigned int size; \/\/ size of file or directory$/;"	m	struct:inode_struct
+strrev	entry.c	/^char *strrev(char *str)$/;"	f
+superblock	fs.h	/^typedef struct superblock{$/;"	s
+total_no_inodes	fs.h	/^  unsigned int total_no_inodes;$/;"	m	struct:superblock
+update	get.c	/^void update()$/;"	f
+write_fs	write.c	/^int write_fs(){$/;"	f

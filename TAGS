@@ -1,0 +1,97 @@
+
+createDisk.c,22
+int createDisk(5,108
+
+entry.c,49
+char *strrev(strrev2,17
+int make_entry(14,202
+
+fs.h,1571
+#define FS_SIZE 11,153
+#define BS 12,186
+typedef struct superblock{superblock16,231
+  unsigned int total_no_inodes;17,258
+  unsigned int no_free_inodes;18,290
+  unsigned int no_free_blocks;19,321
+  unsigned int next_free_inode_index;20,352
+  unsigned int inode_bmap_offset;21,418
+  unsigned int data_block_bmap_offset;22,484
+  unsigned int inode_table_offset;23,561
+  unsigned int data_block_offset;24,629
+  unsigned int next_free_data_block_offset;25,695
+}sb;sb26,739
+typedef struct db_bmap_struct 29,777
+}db_bmap;db_bmap31,843
+typedef struct inode_bmap_struct 34,882
+}inode_bmap;inode_bmap36,954
+typedef struct data_block_struct{data_block_struct39,992
+  char data[data40,1026
+}data_block;data_block41,1070
+typedef struct si_block_struct{si_block_struct44,1119
+}si_block;si_block46,1220
+typedef struct inode_struct{inode_struct49,1256
+  char file_type;50,1285
+  unsigned int size;51,1342
+  unsigned int direct_block_offset;52,1392
+  unsigned int single_indirect_block_offset;53,1482
+}inode;inode54,1563
+typedef struct inode_table_struct{inode_table_struct57,1600
+}inode_table;inode_table59,1690
+typedef struct dir_record_struct{dir_record_struct62,1729
+  unsigned int inode_index;63,1763
+  char file_name[file_name64,1791
+}dir_record;dir_record65,1813
+typedef struct dir_struct 68,1847
+}dir;dir70,1965
+int fd;75,2078
+sb *sb_object;sb_object76,2086
+db_bmap *db_bmap_object;db_bmap_object77,2102
+inode_bmap *inode_bmap_object;inode_bmap_object78,2128
+inode_table *inode_table_object;inode_table_object79,2160
+
+get.c,249
+int my_read(3,18
+sb *get_super_block(get_super_block10,214
+db_bmap *get_db_bmap(get_db_bmap17,344
+inode_bmap *get_inode_bmap(get_inode_bmap24,525
+inode_table *get_inode_table(get_inode_table31,725
+int get_inode(37,877
+void update(85,2120
+
+init.c,192
+int my_write(4,66
+int initiate_file_system(12,249
+int init_superblock(27,646
+int init_db_bmap(45,1399
+int init_inode_bmap(54,1638
+int init_inode_table(64,1892
+int init_root_dir(70,2020
+
+main.c,15
+int main(3,18
+
+Makefile,60
+run:run1,0
+d:d7,176
+out:out13,369
+clean:clean19,570
+
+read.c,94
+int read_file(3,124
+int read_file_from_indirect_block(38,1426
+int print_data_block(73,2534
+
+write.c,164
+int filewrite(5,20
+unsigned int get_next_offset_to_write(71,1616
+int write_fs(137,3975
+int set_next_free_block(145,4292
+int set_next_free_inode_index(162,4724
+
+README.md,0
+
+debug.h,0
+
+bigfile.txt,0
+
+api.h,0
